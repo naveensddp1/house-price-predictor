@@ -10,8 +10,9 @@ spec:
       app: model
   namespaceSelector:
     matchNames:
-      - default  # Or specify your namespace here
+      - default  # or your namespace
   endpoints:
-    - port: "8000"   # Or the name of your service port
-      path: /metrics
+    - port: metrics
+      path: /
       interval: 15s
+      scrapeTimeout: 10s
